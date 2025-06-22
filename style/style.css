@@ -1,0 +1,311 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    background-color: #f8f8f8; 
+    line-height: 1.6; 
+    color: #333;
+}
+
+    /* Contenedor principal para centrar el contenido */
+.container {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px 0;
+}
+
+    /* Estilos del encabezado */
+.header {
+    background-color: #ffffff;
+    padding: 20px 0; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    border-bottom: 1px solid #eee;
+}
+
+    /* Estilos del logo */
+.logo {
+    background-color: #333; 
+    color: #fff; 
+    padding: 8px 15px; 
+    font-weight: 600; 
+    font-size: 1.1em; 
+    margin-left: 5%; 
+    border-radius: 4px; 
+}
+
+    /* Sección principal (hero) */
+.hero-section {
+    background-color: #ffffff; 
+    position: relative; 
+    padding: 50px 0;
+    overflow: hidden; 
+    margin-top: 20px; 
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    min-height: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+    /* Contenido de texto de la sección hero */
+.hero-content {
+    flex: 1; 
+    padding-left: 5%;
+    max-width: 50%; 
+    z-index: 1; 
+    position: relative; 
+}
+
+.hero-content h1 {
+    font-size: 7.8em; 
+    color: #333; 
+    line-height: 1.2;
+    margin-left: 80px;
+    margin-bottom: 10px; 
+}
+
+.hero-content p {
+    font-size: 23.0em;
+    color: #423c3c; 
+    line-height: 1.6; 
+    margin-left: 100px;
+    margin-bottom: 30px; 
+}
+
+    /* Insignia de descuento circular */
+.discount-badge {
+    position: absolute; 
+    top: 50px; 
+    right: 50px; 
+    background-color: #28a745; 
+    color: #fff; 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 1.8em; 
+    font-weight: 700; 
+    text-align: center; 
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4); 
+    z-index: 2; 
+    animation: bounce 2s infinite ease-in-out; 
+}
+
+.discount-badge span {
+    font-size: 0.6em; 
+    margin-top: -5px; 
+    display: block; 
+}
+
+    /* Animación de rebote para la insignia de descuento */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+}
+    50% {
+        transform: translateY(-10px);
+}
+}
+
+    /* Imagen de fondo de la sección hero */
+.hero-image {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 99%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    z-index: 0; 
+}
+
+    /* Superposición de degradado sobre la imagen hero */
+.hero-image::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 100%);
+    z-index: 0; 
+}
+
+    /* Sección de productos */
+.products-section {
+    padding: 40px 0; 
+}
+
+    /* Cuadrícula de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center; 
+}
+
+    /* Tarjeta individual de producto */
+.product-card {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+    text-align: center; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.product-card img {
+    max-width: 80%;
+    height: auto; 
+    margin-bottom: 15px; 
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.1em; 
+    color: #333; 
+    margin-bottom: 8px; 
+    font-weight: 600;
+}
+
+.product-card .price-old {
+    text-decoration: line-through; 
+    color: #999; 
+    font-size: 0.95em; 
+    margin-right: 5px; 
+}
+
+.product-card .price-new {
+    color: #333; 
+    font-size: 1.1em; 
+    font-weight: 700;
+}
+
+    /* Sección "Comprar ahora" */
+.shop-now-section {
+    background-color: #333; 
+    padding: 30px 0; 
+    text-align: center; 
+    margin-top: 40px; 
+    border-radius: 0 0 10px 10px; 
+}
+
+    /* Botón "Comprar ahora" */
+.shop-now-button {
+    display: inline-block; 
+    background-color: #28a745; 
+    color: #fff; 
+    padding: 15px 40px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: 600; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+
+.shop-now-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); 
+}
+
+    /* Media queries para responsividad */
+@media (max-width: 768px){
+    .hero-section {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px 0; 
+}
+}
+
+.hero-content {
+    max-width: 90%; 
+    padding-left: 0;
+    order: 2; 
+}
+
+.hero-content h1 {
+    font-size: 2em; 
+}
+
+.hero-content p {
+    font-size: 0.9em; 
+
+.hero-image {
+    position: relative; 
+    width: 100%; 
+    height: 200px; 
+    margin-bottom: 20px; 
+    border-top-right-radius: 10px; 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+    order: 1; 
+}
+
+.hero-image::before {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,1) 100%); 
+}
+
+.discount-badge {
+    position: relative; 
+    top: auto; 
+    right: auto; 
+    margin: 20px auto; 
+    width: 100px;
+    height: 100px; 
+    font-size: 1.5em; 
+    order: 0; 
+}
+
+.product-grid {
+    grid-template-columns: 1fr; 
+}
+}
+
+@media (max-width: 480px){
+    .container {
+        width: 95%; 
+}
+
+.logo {
+    margin-left: 2%; 
+}
+
+.hero-content h1 {
+    font-size: 1.8em; 
+}
+
+.hero-content p {
+    font-size: 0.8em; 
+}
+
+.discount-badge {
+    width: 80px; 
+    height: 80px; 
+    font-size: 1.2em; 
+}
+
+.shop-now-button {
+    padding: 12px 30px;
+    font-size: 0.9em;
+}
+}
